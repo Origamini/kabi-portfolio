@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>
+        aboutme
+    </title>
+    <style>
+        .about{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .about-content {
+            color: rgb(20, 102, 73);
+            text-shadow: 0px 0px 1px aqua, 1px 1px 2px aqua, 2px 2px 3px rgb(1, 58, 58), 3px 3px 3px black, 2px 0px 3px pink;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .about-me {
+            color: black;
+            width: fit-content;
+            font-weight: 800;
+            background-color: lightpink;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5pc;
+            background-image: linear-gradient(to right,red,yellow,green,blue);
+            transition: 0.2s ease-in;
+            border: 2px solid aquamarine;
+        }
+        .about-me:hover{
+            background-image: linear-gradient(to right,rgb(168, 168, 251),rgb(100, 245, 100),rgb(255, 255, 123),rgb(255, 133, 133));
+            transform: scale(1.2);
+            box-shadow: 1px 2px 7px black,1px 0px 5px palevioletred,1px 0px 6px;
+            border: 2px solid #043927;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about">
+        <div class="about-content">
+            <h1>About me Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, similique unde. Sint
+                recusandae obcaecati quasi, repellat illo atque repellendus. Numquam, culpa. Quae eveniet accusamus
+                ullam nemo omnis aut sit reiciendis.</h1>
+        </div>
+        <div class="about-me">AboutMe...</div>
+    </div>
+</body>
+
+</html>
