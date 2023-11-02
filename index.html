@@ -12,18 +12,44 @@
       box-sizing: border-box;
       background-color: #043927
     }
-
+    body{
+      justify-content: flex-start;
+    }
     .heading {
-      background-color: transparent;
-      height: 8vb;
-      position: relative;
-      width: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: fit-content;
+      width: 3.7cm;
+      background-color: gray;
+      padding: 10px;
       display: flex;
-      justify-content: right;
-      align-items: center;
+      flex-direction: column;
     }
 
-    .heading a {
+    .menu-toggle {
+      border: 2px solid aqua;
+      padding: 10px;
+      border-radius: 50%;
+      width: fit-content;
+      cursor: pointer;
+    }
+
+    .bar {
+      width: 30px;
+      height: 3px;
+      background-color: aqua;
+      margin: 5px 0;
+    }
+
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      backdrop-filter: blur(1px);
+    }
+
+    .navigation a {
       text-decoration: none;
       background-color: transparent;
       margin: 10px;
@@ -34,7 +60,7 @@
       transition: 0.3s ease-in-out;
     }
 
-    .heading a:hover {
+    .navigation a:hover {
       color: #129267;
       border: 2px solid #129267;
     }
@@ -46,7 +72,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: transparent;
+      background-color: whitesmoke;
     }
 
     .folio-photo {
@@ -60,7 +86,7 @@
     }
 
     .folio-content {
-      width: 70%;
+      width: 100%;
       height: 85%;
       position: relative;
       margin-bottom: 1cm;
@@ -68,23 +94,11 @@
       border: 2px solid black;
       overflow-x: auto;
     }
-    .menu-toggle{
-      margin-right: 10px;
-      border: 2px solid aqua;
-      padding: 2px;
-      border-radius: 10px;
-    }
-    .bar {
-      width: 30px;
-      height: 3px;
-      background-color: aqua;
-      margin: 5px 0;
-      cursor: pointer;
-    }
-    .navigation {
-      background-color: transparent;
-    }
+
     @media (max-width:1200px) {
+      .folio{
+        background-color: blue;
+      }
       .folio-photo {
         width: 40%;
       }
@@ -93,12 +107,13 @@
         width: 60%;
       }
     }
+
     @media (max-width:768px) {
       .folio {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        flex-direction: column;
+        flex-direction: column-reverse;
       }
 
       .folio-photo {
@@ -114,18 +129,17 @@
         padding: 5px;
       }
 
-      .heading a {
+       a {
         margin: 5px;
         font-size: 1pc;
       }
 
       @media (max-width:500px) {
+        .folio{
+          background-color: #129267;
+        }
         .folio-photo {
           margin-top: 0.5px;
-        }
-
-        .menu-toggle {
-          display: block;
         }
       }
     }
@@ -133,29 +147,28 @@
 </head>
 
 <body>
-  <div class="heading">
-    <div class="navigation" id="navigation">
-      <a href="#" onclick="loadContent('home.html')">Home</a>
-      <a href="#" onclick="loadContent('about.html')">AboutMe</a>
-      <a href="#" onclick="loadContent('Experience.html')">Experience</a>
-      <a href="#" onclick="loadContent('skills.html')">Skills</a>
-      <a href="#" onclick="loadContent('projects.html')">Projects</a>
-      <a href="#" onclick="loadContent('contacts.html')">Contacts</a>
-    </div>
-    <div class="menu-toggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
   </div>
   <div class="folio">
-    <div class="folio-photo"><img
-        src="https://ih1.redbubble.net/image.4689247371.5060/aps,504x498,medium,transparent-pad,600x600,f8f8f8.u8.jpg"
-        alt="error" style="height: 100%;width: 100%;object-fit: cover;border-radius: 15px;">
-    </div>
     <div class="folio-content" id="folio-content">
       <h2 style="color: aqua;">click on icons to know about me:)</h2>
     </div>
+    <div class="folio-photo"> <div>
+      <img src="https://ih1.redbubble.net/image.4689247371.5060/aps,504x498,medium,transparent-pad,600x600,f8f8f8.u8.jpg" alt="error" style="height: 100%;width: 100%;object-fit: cover;border-radius: 15px;"></div>
+      <div class="heading">
+        <div class="menu-toggle" id="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="navigation" id="navigation">
+          <a href="#" onclick="loadContent('home.html')">Home</a>
+          <a href="#" onclick="loadContent('about.html')">AboutMe</a>
+          <a href="#" onclick="loadContent('Experience.html')">Experience</a>
+          <a href="#" onclick="loadContent('skills.html')">Skills</a>
+          <a href="#" onclick="loadContent('projects.html')">Projects</a>
+          <a href="#" onclick="loadContent('contacts.html')">Contacts</a>
+        </div>
+  </div>
   </div>
   <script>
     function loadContent(page) {
@@ -178,19 +191,22 @@
           console.error('Error fetching external content:', error);
         });
     }
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menuOptions = document.querySelector(".navigation");
-    menuOptions.style.display = "none";
-    function toggleMenu(){
-      menuOptions.classList.toggle("show-options");
-      if (menuOptions.style.display == "none") {
-        menuOptions.style.display = "block";
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuOptions = document.getElementById('navigation');
+  
+    // Initially hide the menu
+    menuOptions.style.display = 'none';
+  
+    menuToggle.addEventListener('click', function() {
+      menuOptions.classList.toggle('active');
+  
+      if (menuOptions.classList.contains('active')) {
+        menuOptions.style.display = 'flex';
+        menuOptions.style.flexDirection = 'column';
+      } else {
+        menuOptions.style.display = 'none';
       }
-      else if(menuOptions.style.display == "block"){
-        menuOptions.style.display = "none";
-      }
-    };
-    menuToggle.addEventListener("click",toggleMenu);
+    });
   </script>
 </body>
 
