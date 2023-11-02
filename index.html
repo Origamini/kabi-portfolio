@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      background-color: #043927
+      background-color: #082017
     }
     body{
       justify-content: flex-start;
@@ -134,7 +134,7 @@
 
       @media (max-width:500px) {
         .folio{
-          background-color: #129267;
+          background-color: transparent;
         }
         .folio-photo {
           margin-top: 0.5px;
@@ -148,7 +148,9 @@
   </div>
   <div class="folio">
     <div class="folio-content" id="folio-content">
-      <h2 style="color: aqua;">click on icons to know about me:)</h2>
+    <h3 style="color: white;">Hi There,</h3>
+    <h1 style="color: white;">I am Kavitha Kumari</h1>
+    <h2 style="color: white;">I am a <span id="element" style="color: #129267;"></span></h2>
     </div>
     <div class="folio-photo"> <div>
       <img src="https://ih1.redbubble.net/image.4689247371.5060/aps,504x498,medium,transparent-pad,600x600,f8f8f8.u8.jpg" alt="error" style="height: 100%;width: 100%;object-fit: cover;border-radius: 15px;"></div>
@@ -166,6 +168,7 @@
         </div>
   </div>
   </div>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script>
     function loadContent(page) {
       // Specify the URL of the external HTML file
@@ -202,6 +205,11 @@
       } else {
         menuOptions.style.display = 'none';
       }
+    });
+    var typed = new Typed('#element', {
+      strings: ["hello","how are you"],
+      typeSpeed: 50,
+      loop:true,
     });
   </script>
 </body>
