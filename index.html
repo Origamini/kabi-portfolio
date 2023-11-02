@@ -21,32 +21,34 @@
       right: 0;
       height: fit-content;
       width: 3.7cm;
-      background-color: gray;
+      background-color: transparent;
       padding: 10px;
       display: flex;
       flex-direction: column;
+      backdrop-filter: blur(40px);
     }
 
     .menu-toggle {
       border: 2px solid aqua;
-      padding: 10px;
       border-radius: 50%;
       width: fit-content;
+      height: fit-content;
       cursor: pointer;
     }
 
-    .bar {
-      width: 30px;
-      height: 3px;
-      background-color: aqua;
-      margin: 5px 0;
+    .bar-icon{
+      width: fit-content;
+      padding: 5px;
+      border-radius: 20px;
+      height: 40px;
+      width: 40px;
     }
-
     .navigation {
       display: flex;
       flex-direction: column;
       text-align: right;
-      backdrop-filter: blur(1px);
+      background-color: transparent;
+      backdrop-filter: blur(50px);
     }
 
     .navigation a {
@@ -72,7 +74,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: whitesmoke;
     }
 
     .folio-photo {
@@ -96,9 +97,6 @@
     }
 
     @media (max-width:1200px) {
-      .folio{
-        background-color: blue;
-      }
       .folio-photo {
         width: 40%;
       }
@@ -156,9 +154,7 @@
       <img src="https://ih1.redbubble.net/image.4689247371.5060/aps,504x498,medium,transparent-pad,600x600,f8f8f8.u8.jpg" alt="error" style="height: 100%;width: 100%;object-fit: cover;border-radius: 15px;"></div>
       <div class="heading">
         <div class="menu-toggle" id="menu-toggle">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+          <img src="icons8-menu-64.png" alt="sorry wrong images" class="bar-icon">
         </div>
         <div class="navigation" id="navigation">
           <a href="#" onclick="loadContent('home.html')">Home</a>
