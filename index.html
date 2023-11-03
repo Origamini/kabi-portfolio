@@ -12,15 +12,17 @@
       box-sizing: border-box;
       background-color: #082017
     }
-    body{
+
+    body {
       justify-content: flex-start;
     }
+
     .heading {
       position: fixed;
       top: 0;
       right: 0;
       height: fit-content;
-      width: 3.7cm;
+      width: 3.3cm;
       background-color: transparent;
       padding: 10px;
       display: flex;
@@ -36,25 +38,27 @@
       cursor: pointer;
     }
 
-    .bar-icon{
+    .bar-icon {
       width: fit-content;
       padding: 5px;
       border-radius: 20px;
       height: 40px;
       width: 40px;
     }
+
     .navigation {
       display: flex;
       flex-direction: column;
       text-align: right;
       background-color: transparent;
       backdrop-filter: blur(50px);
+      position: relative;
     }
 
     .navigation a {
       text-decoration: none;
       background-color: transparent;
-      margin: 10px;
+      margin-bottom: 10px;
       padding: 5px;
       color: aliceblue;
       font-size: larger;
@@ -69,11 +73,13 @@
 
     .folio {
       height: 100%;
-      width: 100%;
+      width: 80%;
       position: fixed;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-left: 5pc;
+      background-color: #129267;
     }
 
     .folio-photo {
@@ -94,6 +100,10 @@
       padding: 5px;
       border: 2px solid black;
       overflow-x: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     @media (max-width:1200px) {
@@ -127,15 +137,18 @@
         padding: 5px;
       }
 
-       a {
+      a {
         margin: 5px;
         font-size: 1pc;
       }
 
       @media (max-width:500px) {
-        .folio{
+        .folio {
           background-color: transparent;
+          width: 100%;
+          margin-left: 0px;
         }
+
         .folio-photo {
           margin-top: 0.5px;
         }
@@ -148,12 +161,12 @@
   </div>
   <div class="folio">
     <div class="folio-content" id="folio-content">
-    <h3 style="color: white;">Hi There,</h3>
-    <h1 style="color: white;">I am Kavitha Kumari</h1>
-    <h2 style="color: white;">I am a <span id="element" style="color: #129267;"></span></h2>
+      <link rel="stylesheet" href="home.html">
+      <!-- content -->
     </div>
-    <div class="folio-photo"> <div>
-      <img src="https://ih1.redbubble.net/image.4689247371.5060/aps,504x498,medium,transparent-pad,600x600,f8f8f8.u8.jpg" alt="error" style="height: 100%;width: 100%;object-fit: cover;border-radius: 15px;"></div>
+    <div class="folio-photo">
+      <img src="612-6122373_hire-web-developer-web-development-platform-hd-png.png" alt="error"
+        style="height: 100%;width: 100%;object-fit: cover;border-radius: 15px;">
       <div class="heading">
         <div class="menu-toggle" id="menu-toggle">
           <img src="icons8-menu-64.png" alt="sorry wrong images" class="bar-icon">
@@ -166,52 +179,56 @@
           <a href="#" onclick="loadContent('projects.html')">Projects</a>
           <a href="#" onclick="loadContent('contacts.html')">Contacts</a>
         </div>
-  </div>
-  </div>
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-  <script>
-    function loadContent(page) {
-      // Specify the URL of the external HTML file
-      const url = page;
+      </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
 
-      // Make a fetch request to the external file
-      fetch(url)
-        .then((response) => {
-          if (response.ok) {
-            return response.text(); // Get the response text
-          }
-          throw new Error('Network response was not ok');
-        })
-        .then((data) => {
-          // Inject the fetched content into the target element
-          document.getElementById('folio-content').innerHTML = data;
-        })
-        .catch((error) => {
-          console.error('Error fetching external content:', error);
+      function initializeTypedJS() {
+        var typed = new Typed('#element', {
+          strings: ["Customer Service associate", "Web developer", "Java Programmer"],
+          typeSpeed: 50,
+          loop: true,
         });
-    }
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuOptions = document.getElementById('navigation');
-  
-    // Initially hide the menu
-    menuOptions.style.display = 'none';
-  
-    menuToggle.addEventListener('click', function() {
-      menuOptions.classList.toggle('active');
-  
-      if (menuOptions.classList.contains('active')) {
-        menuOptions.style.display = 'flex';
-        menuOptions.style.flexDirection = 'column';
-      } else {
-        menuOptions.style.display = 'none';
       }
-    });
-    var typed = new Typed('#element', {
-      strings: ["hello","how are you"],
-      typeSpeed: 50,
-      loop:true,
-    });
-  </script>
+      loadContent('home.html');
+      function loadContent(page) {
+        // Specify the URL of the external HTML file
+        const url = page;
+        // Make a fetch request to the external file
+        fetch(url)
+          .then((response) => {
+            if (response.ok) {
+              return response.text(); // Get the response text
+            }
+            throw new Error('Network response was not ok');
+          })
+          .then((data) => {
+            // Inject the fetched content into the target element
+            document.getElementById('folio-content').innerHTML = data;
+            initializeTypedJS();
+          })
+          .catch((error) => {
+            console.error('Error fetching external content:', error);
+          });
+      }
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuOptions = document.getElementById('navigation');
+
+      // Initially hide the menu
+      menuOptions.style.display = 'none';
+
+      menuToggle.addEventListener('click', function () {
+        menuOptions.classList.toggle('active');
+
+        if (menuOptions.classList.contains('active')) {
+          menuOptions.style.display = 'flex';
+          menuOptions.style.flexDirection = 'column';
+        } else {
+          menuOptions.style.display = 'none';
+        }
+      });
+    </script>
 </body>
 
 </html>
