@@ -10,45 +10,84 @@
             height: 100%;
             width: 100%;
             display: flex;
+            justify-content:space-between;
+            flex-direction: row-reverse;
+            color: white;
+        }
+        .about-me{
+            overflow: auto;
+        }
+        .about-icons{
+            height: 100%;
+            width: 10pc;
+            margin-right: 1pc;
+            background-color: transparent;
+            height: auto;
+            display: flex;
             justify-content: center;
+            align-items: center;
             flex-direction: column;
-        }
-
-        .about-content {
-            color: rgb(20, 102, 73);
-            text-shadow: 0px 0px 1px aqua, 1px 1px 2px aqua, 2px 2px 3px rgb(1, 58, 58), 3px 3px 3px black, 2px 0px 3px pink;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        .about-me {
-            color: black;
-            width: fit-content;
-            font-weight: 800;
-            background-color: lightpink;
+        } 
+        .icons{
+            height: 1cm;
+            width: 1cm;
+            margin-top: 12px;
             padding: 10px;
-            margin: 5px;
+            background-color:rgb(94, 2, 94);
+            border: 2px solid rgb(232, 20, 232);
             border-radius: 5pc;
-            background-image: linear-gradient(to right, red, yellow, green, blue);
-            transition: 0.2s ease-in;
-            border: 2px solid aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }  
+        .icons:hover{
+            background-color: purple;
         }
-
-        .about-me:hover {
-            background-image: linear-gradient(to right, rgb(168, 168, 251), rgb(100, 245, 100), rgb(255, 255, 123), rgb(255, 133, 133));
-            transform: scale(1.2);
-            box-shadow: 1px 2px 7px black, 1px 0px 5px palevioletred, 1px 0px 6px;
-            border: 2px solid #043927;
+        h1{
+            color: aquamarine;
         }
     </style>
 </head>
 <body>
     <div class="about">
-        <div class="about-content">
-            <h1>About me Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, similique unde. Sint
-                recusandae obcaecati quasi, repellat illo atque repellendus. Numquam, culpa. Quae eveniet accusamus
-                ullam nemo omnis aut sit reiciendis.</h1>
+        <div class="about-me">
+            <h1>About Me</h1>
+
+            Hello! I am a passionate and dedicated professional with a strong background in computer science and a flair for web development. With a BSc in Computer Science and a consistent record of academic excellence, I've cultivated a deep appreciation for problem-solving and creative thinking.
+            
+            <h1>My Journey</h1>
+            
+            My journey began with programming languages like Java, C, C++, JavaScript, HTML, and CSS. I've also ventured into the world of modern web development with React.js, crafting intuitive and user-friendly web applications.
+            
+            <h1>AWS Enthusiast</h1>
+            
+            Currently, I'm on an exciting AWS (Amazon Web Services) adventure, where I've not only gained knowledge but have also applied it in real-world projects. Building and optimizing cloud resources have become my forte.
+            
+            <h1>Customer Service at Amazon</h1>
+            
+            I'm proud to be part of Amazon as a Customer Service Associate, specializing in the chat process. My commitment to delivering exceptional customer experiences is unwavering.
+            
+            <h1>Academic Excellence</h1>
+            
+            Academic excellence is a cornerstone of my journey. I was the topper in my college with a GPA of 9.7 in graduation. My academic journey reflects my dedication and commitment to learning.
+            
+           <h1>Chess Enthusiast</h1>
+            
+            Beyond the digital realm, I'm a strategic thinker. Chess has been a part of my life, and I've earned victories and accolades in this intellectual sport.
+            
+            <h1>Future Developer</h1>
+            
+            My vision is to evolve into a skilled developer, shaping the digital landscape with innovative solutions and experiences. My journey is an ongoing quest, and I'm excited about the challenges that lie ahead.
+            
+            I invite you to explore my portfolio to discover more about my work, experiences, and projects. Let's connect and embark on new opportunities together!</div>
+        <div class="about-icons">
+            <div class="icons"><h3>H</h3></div>
+            <div class="icons"><h3>H</h3></div>
+            <div class="icons"><h3>H</h3></div>
+            <div class="icons"><h3>H</h3></div>
+            <div class="icons"><h3>H</h3></div>
         </div>
-        <div class="about-me">AboutMe...</div>
-    </div>
+        </div>
 </body>
 </html>
