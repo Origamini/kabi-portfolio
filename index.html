@@ -38,6 +38,14 @@
       cursor: pointer;
     }
 
+    .heading-row {
+      width: auto;
+      background-color: transparent;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
     .bar-icon {
       width: fit-content;
       padding: 5px;
@@ -152,6 +160,7 @@
 
         .folio-photo {
           margin-top: 0.5px;
+          height: 35%;
           height: max-content;
         }
       }
@@ -170,8 +179,10 @@
       <img src="612-6122373_hire-web-developer-web-development-platform-hd-png.png" alt="error"
         style="height: 100%;width: 100%;object-fit: cover;border-radius: 15px;">
       <div class="heading">
-        <div class="menu-toggle" id="menu-toggle">
-          <img src="icons8-menu-64.png" alt="sorry wrong images" class="bar-icon">
+        <div class="heading-row">
+          <div class="menu-toggle" id="menu-toggle">
+            <img src="icons8-menu-64.png" alt="sorry wrong images" class="bar-icon">
+          </div>
         </div>
         <div class="navigation" id="navigation">
           <a href="#" onclick="loadContent('home.html')">Home</a>

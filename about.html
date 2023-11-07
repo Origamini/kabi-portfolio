@@ -10,14 +10,100 @@
             height: 100%;
             width: 100%;
             display: flex;
-            justify-content:space-between;
+            justify-content: space-between;
             flex-direction: row-reverse;
             color: white;
         }
-        .about-me{
+
+        .about-content {
             overflow: auto;
         }
-        .about-icons{
+
+        /* Track */
+        ::-webkit-scrollbar {
+            width: 8px;
+            /* Set the width of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #00A550;
+            /* Track background color */
+        }
+
+        /* Thumb (the moving part) */
+        ::-webkit-scrollbar-thumb {
+            background: #006241;
+            /* Thumb color */
+            border-radius: 6px;
+            /* Rounded corners for the thumb */
+        }
+
+        /* Button (at the top and bottom of the scrollbar) */
+        ::-webkit-scrollbar-button {
+            display: none;
+            /* Hide the buttons */
+        }
+
+        /* Corner (where the vertical and horizontal scrollbars meet) */
+        ::-webkit-scrollbar-corner {
+            background: #DADD98;
+            /* Corner background color */
+        }
+
+        .box {
+            border-radius: 55px 55px 55px 0px;
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .right {
+            border-radius: 55px 55px 55px 0px;
+        }
+
+        .left {
+            border-radius: 55px 55px 0px 55px;
+        }
+
+        .aboutme {
+            border: 2px solid white;
+            width: 75%;
+        }
+
+        .journey {
+            border: 2px solid white;
+            width: 75%;
+            margin-left: 25%;
+        }
+
+        .enthusiast {
+            border: 2px solid white;
+            width: 75%;
+        }
+
+        .csa {
+            border: 2px solid white;
+            width: 75%;
+            margin-left: 25%;
+        }
+
+        .excellence {
+            border: 2px solid white;
+            width: 75%;
+        }
+
+        .game {
+            border: 2px solid white;
+            width: 75%;
+            margin-left: 25%;
+        }
+
+        .future {
+            border: 2px solid white;
+            width: 75%;
+        }
+
+        .about-icons {
             height: 100%;
             width: 10pc;
             margin-right: 1pc;
@@ -27,67 +113,102 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-        } 
-        .icons{
+        }
+
+        .icons {
             height: 1cm;
             width: 1cm;
             margin-top: 12px;
             padding: 10px;
-            background-color:rgb(94, 2, 94);
+            background-color: rgb(94, 2, 94);
             border: 2px solid rgb(232, 20, 232);
             border-radius: 5pc;
             display: flex;
             justify-content: center;
             align-items: center;
-            
-        }  
-        .icons:hover{
+
+        }
+
+        .icons:hover {
             background-color: purple;
         }
-        h1{
+
+        h1 {
             color: aquamarine;
         }
     </style>
 </head>
+
 <body>
     <div class="about">
-        <div class="about-me">
-            <h1>About Me</h1>
+        <div class="about-content">
+            <div class="box right aboutme">
+                <h1>About Me</h1>
 
-            Hello! I am a passionate and dedicated professional with a strong background in computer science and a flair for web development. With a BSc in Computer Science and a consistent record of academic excellence, I've cultivated a deep appreciation for problem-solving and creative thinking.
-            
-            <h1>My Journey</h1>
-            
-            My journey began with programming languages like Java, C, C++, JavaScript, HTML, and CSS. I've also ventured into the world of modern web development with React.js, crafting intuitive and user-friendly web applications.
-            
-            <h1>AWS Enthusiast</h1>
-            
-            Currently, I'm on an exciting AWS (Amazon Web Services) adventure, where I've not only gained knowledge but have also applied it in real-world projects. Building and optimizing cloud resources have become my forte.
-            
-            <h1>Customer Service at Amazon</h1>
-            
-            I'm proud to be part of Amazon as a Customer Service Associate, specializing in the chat process. My commitment to delivering exceptional customer experiences is unwavering.
-            
-            <h1>Academic Excellence</h1>
-            
-            Academic excellence is a cornerstone of my journey. I was the topper in my college with a GPA of 9.7 in graduation. My academic journey reflects my dedication and commitment to learning.
-            
-           <h1>Chess Enthusiast</h1>
-            
-            Beyond the digital realm, I'm a strategic thinker. Chess has been a part of my life, and I've earned victories and accolades in this intellectual sport.
-            
-            <h1>Future Developer</h1>
-            
-            My vision is to evolve into a skilled developer, shaping the digital landscape with innovative solutions and experiences. My journey is an ongoing quest, and I'm excited about the challenges that lie ahead.
-            
-            I invite you to explore my portfolio to discover more about my work, experiences, and projects. Let's connect and embark on new opportunities together!</div>
+                Hello! I am a passionate and dedicated professional with a strong background in computer science and a
+                flair for web development. With a BSc in Computer Science and a consistent record of academic
+                excellence, I've cultivated a deep appreciation for problem-solving and creative thinking.
+            </div>
+            <div class="box left journey">
+                <h1>My Journey</h1>
+
+                My journey began with programming languages like Java, C, C++, JavaScript, HTML, and CSS. I've also
+                ventured into the world of modern web development with React.js, crafting intuitive and user-friendly
+                web applications.
+            </div>
+            <div class="box right enthusiast">
+                <h1>AWS Enthusiast</h1>
+
+                Currently, I'm on an exciting AWS (Amazon Web Services) adventure, where I've not only gained knowledge
+                but have also applied it in real-world projects. Building and optimizing cloud resources have become my
+                forte.
+            </div>
+            <div class="box left csa">
+                <h1>Customer Service at Amazon</h1>
+
+                I'm proud to be part of Amazon as a Customer Service Associate, specializing in the chat process. My
+                commitment to delivering exceptional customer experiences is unwavering.
+            </div>
+            <div class="box right excellence">
+                <h1>Academic Excellence</h1>
+
+                Academic excellence is a cornerstone of my journey. I was the topper in my college with a GPA of 9.7 in
+                graduation. My academic journey reflects my dedication and commitment to learning.
+            </div>
+            <div class="box left game">
+                <h1>Chess Enthusiast</h1>
+
+                Beyond the digital realm, I'm a strategic thinker. Chess has been a part of my life, and I've earned
+                victories and accolades in this intellectual sport.
+            </div>
+            <div class="box right future">
+                <h1>Future Developer</h1>
+
+                My vision is to evolve into a skilled developer, shaping the digital landscape with innovative solutions
+                and experiences. My journey is an ongoing quest, and I'm excited about the challenges that lie ahead.
+
+                I invite you to explore my portfolio to discover more about my work, experiences, and projects. Let's
+                connect and embark on new opportunities together!
+            </div>
+        </div>
         <div class="about-icons">
-            <div class="icons"><h3>H</h3></div>
-            <div class="icons"><h3>H</h3></div>
-            <div class="icons"><h3>H</h3></div>
-            <div class="icons"><h3>H</h3></div>
-            <div class="icons"><h3>H</h3></div>
+            <div class="icons">
+                <h3>H</h3>
+            </div>
+            <div class="icons">
+                <h3>H</h3>
+            </div>
+            <div class="icons">
+                <h3>H</h3>
+            </div>
+            <div class="icons">
+                <h3>H</h3>
+            </div>
+            <div class="icons">
+                <h3>H</h3>
+            </div>
         </div>
-        </div>
+    </div>
 </body>
+
 </html>
