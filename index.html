@@ -232,15 +232,28 @@
       menuOptions.style.display = 'none';
 
       menuToggle.addEventListener('click', function () {
-        menuOptions.classList.toggle('active');
+        menuOptions.classList.toggle('disclose');
 
-        if (menuOptions.classList.contains('active')) {
+        if (menuOptions.classList.contains('disclose')) {
           menuOptions.style.display = 'flex';
           menuOptions.style.flexDirection = 'column';
         } else {
           menuOptions.style.display = 'none';
         }
       });
+
+      function color(ids) {
+        const sections = document.querySelectorAll('.box');
+        
+        // Remove "active" class from all sections
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Add "active" class to the clicked section
+        const target = document.getElementById(ids);
+        target.classList.add('active');
+    }
     </script>
 </body>
 
