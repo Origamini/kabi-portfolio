@@ -12,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: black;
+            box-shadow: 1px 0px 20px rgb(0, 255, 136);
         }
 
         .contactus {
@@ -25,7 +25,7 @@
             background: transparent;
             color: white;
             border: none;
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid rgb(45, 179, 125);
             padding: 5px 0;
             font-size: 16px;
             margin: 0 10px;
@@ -49,15 +49,14 @@
 
         .contact-box input[type="text"]:focus~span,
         .contact-box input[type="text"]:valid~span{
-            color: aqua;
-            font-size: 12px;
-            transform: translateY(-20px);
+            color: rgb(10, 129, 75);
+            font-size: 13px;
+            transform: translateY(-15px);
         }
 
         form {
             width: 90%;
             height: 100%;
-            border: 2px solid black;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -73,12 +72,17 @@
         .btn {
             width: 2.5cm;
             height: 1.5cm;
-            margin: 20px;
+            margin: 30px;
             color: white;
-            width: 50%;
-            background: rgba(220, 20, 60, 1);
-            border-radius: 10px;
+            width: 30vh;
+            background: transparent;
+            border-radius: 2px;
             font-size: larger;
+            border: 2px solid rgb(45, 179, 90);
+        }
+        .btn:hover{
+            color:rgb(127, 255, 150);
+            
         }
     </style>
 </head>
