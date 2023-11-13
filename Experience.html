@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>experiences</title>
     <style>
-        .tenure{
-            background-color: hotpink;
+        .tenure {
+            background-color: transparent;
             height: 100%;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .tenure-line{
-            color: white;
+
+        .tenure-line {
+            background-color: white;
             height: 2px;
             width: 100%;
+            display: flex;
+            justify-content: space-between; /* Adjusted to space between lines */
         }
-        .horizontal{
-            background-color: aqua;
-            height: 2px;
-            width: 2px;
-            margin-right: 1cm;
-            margin-left: 1cm;
+
+        .line {
+            height: 20px;
+            width: 1px;
+            margin: 0px 30px;
+            display: flex;
+            position: relative;
+            color: wheat;
         }
-        .vertical{
-            background-color: aqua;
-            height: 2px;
-            width: 2px;
-            margin-right: 1cm;
-            margin-left: 1cm;
-           
+
+        .up {
+            background-color: rgb(167, 99, 231);
+            top: -20px;
+        }
+
+        .down {
+            background-color: palevioletred;
+            bottom: -2px;
         }
     </style>
 </head>
+
 <body>
     <div class="tenure">
         <div class="tenure-line">
-            <div class="horizontal"></div>
-            <div class="horizontal"></div>
-            <div class="vertical"></div>
+            <div class="line up">Hello</div>
+            <div class="line down">Hello</div>
+            <div class="line up">Hello</div>
+            <div class="line down">Hello</div>
+            <div class="line up">Hello</div>
+            <div class="line down">Hello</div>
+            <div class="line up">Hello</div>
+            <div class="line down">Hello</div>
         </div>
     </div>
 </body>
+
 </html>
