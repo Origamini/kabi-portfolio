@@ -7,55 +7,87 @@
     <title>experiences</title>
     <style>
         .tenure {
-            background-color: transparent;
             height: 100%;
-            width: 100%;
+            width:max-content;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
         }
 
-        .tenure-line {
-            background-color: white;
-            height: 2px;
+        .tenure-graph {
+            height: 90%;
             width: 100%;
             display: flex;
-            justify-content: space-between; /* Adjusted to space between lines */
+            margin-top: 1cm;
+            flex-direction: column;
+            /* Adjusted to space between lines */
         }
-
-        .line {
-            height: 20px;
-            width: 1px;
-            margin: 0px 30px;
+        .line{
+            height: 100%;
+            width: 5cm;
+            padding: 5px;
             display: flex;
+            flex-direction: column;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        .linear-line{
+            height: 30%;
+            width: 3px;
+            background-color: rgba(235, 156, 184, 0.55);
+        }
+        .comment-line{
+            height: auto;
+            width: 5cm;
+            color: #94cbb9;
             position: relative;
-            color: wheat;
+            font-size: 15px;
+        }
+        .up{
+            height: 60%;
+        }
+        .line-vertical{
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+        .line-horizontal{
+            height: 2px;
+            background: linear-gradient(to right, rgba(214, 214, 99), pink,blue,orange,red,purple, rgba(156, 156, 25));
+            box-shadow: 0 0 10px 15px rgba(55, 202, 116, 0.8); 
         }
 
-        .up {
-            background-color: rgb(167, 99, 231);
-            top: -20px;
-        }
-
-        .down {
-            background-color: palevioletred;
-            bottom: -2px;
+        @media (max-width:768px){
+       .tenure-graph{
+        margin-top: 0px;
+        height: 100%;
+       }
         }
     </style>
 </head>
 
 <body>
     <div class="tenure">
-        <div class="tenure-line">
-            <div class="line up">Hello</div>
-            <div class="line down">Hello</div>
-            <div class="line up">Hello</div>
-            <div class="line down">Hello</div>
-            <div class="line up">Hello</div>
-            <div class="line down">Hello</div>
-            <div class="line up">Hello</div>
-            <div class="line down">Hello</div>
+        <div class="tenure-graph">
+            <div class="line-horizontal"></div>
+            <div class="line-vertical">
+            <div class="line">
+                <div class="linear-line up"></div>
+                <div class="comment-line">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor voluptate, ratione earum dicta quidem quos nulla odit illo quaerat culpa tempora et officiis quasi optio, minus, eligendi pariatur. Optio, ab.</div>
+            </div>
+            <div class="line">
+                <div class="linear-line"></div>
+                <div class="comment-line">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor voluptate, ratione earum dicta quidem quos nulla odit illo quaerat culpa tempora et officiis quasi optio, minus, eligendi pariatur. Optio, ab.</div>
+            </div>
+            <div class="line">
+                <div class="linear-line up"></div>
+                <div class="comment-line">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor voluptate, ratione earum dicta quidem quos nulla odit illo quaerat culpa tempora et officiis quasi optio, minus, eligendi pariatur. Optio, ab.</div>
+            </div>
+            <div class="line">
+                <div class="linear-line"></div>
+                <div class="comment-line">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor voluptate, ratione earum dicta quidem quos nulla odit illo quaerat culpa tempora et officiis quasi optio, minus, eligendi pariatur. Optio, ab.</div>
+            </div>
         </div>
+    </div>
     </div>
 </body>
 
